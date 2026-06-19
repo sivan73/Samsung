@@ -49,7 +49,7 @@ def find_element(x,left,right,compare):
 
 #Insertion sort 
 
-def insertionsort(a):
+def insertionsort(a): #Non-Mutating (using another list/array for new sorted array)
     if a==[] : return []
     b = [a.pop()]
     while a != []:
@@ -59,5 +59,26 @@ def insertionsort(a):
         b.insert(i,a.pop())
         print(a,b)
     return b
+
+def insertionsort_NM(a): #mutating
+    for i in range(1,len(a)):
+        k = a[i]
+        j = i=1
+        while j>= 0 and a[j] > k:
+            a[j + 1] = a[j]
+            j -= 1
+        a[j+1] = k
+        print(a)
+    return a
+
+def insertionsortsir(a):
+    nop = len(a)        #nop- number of passes
+    while nop > 0:
+        print(a)
+        curr = a.pop()
+        i = 0
+        while i <= (len(a) - nop) and a[i] < curr : i += 1
+        a.insert(i,curr)
+        nop -= 1
 
 

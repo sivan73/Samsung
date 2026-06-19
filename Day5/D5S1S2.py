@@ -960,12 +960,12 @@ Traceback (most recent call last):
   File "<pyshell#66>", line 2, in bubblesort
     for i in range(len(a)) : bubble(a,0,len(a)-i)
 TypeError: bubble() takes 2 positional arguments but 3 were given
->>> selectionsort(arr2, lambda x,y : x>y)
->>> arr2
+selectionsort(arr2, lambda x,y : x>y)
+arr2
 [0, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
->>> arr
+arr
 [5, 4, 2, 6, 8, 7, 0, 9, 3, 11, 12]
->>> insertionsort(arr3)
+insertionsort(arr3)
 [5, 4, 2, 6, 8, 7, 0, 9, 3] [11, 12]
 [5, 4, 2, 6, 8, 7, 0, 9] [3, 11, 12]
 [5, 4, 2, 6, 8, 7, 0] [3, 9, 11, 12]
@@ -977,32 +977,32 @@ TypeError: bubble() takes 2 positional arguments but 3 were given
 [5] [0, 2, 3, 4, 6, 7, 8, 9, 11, 12]
 [] [0, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
 [0, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
->>> arr3
+arr3
 []
->>> arr1
+arr1
 [5, 4, 2, 6, 8, 7, 0, 9, 3, 11, 12]
->>> arr
+arr
 [5, 4, 2, 6, 8, 7, 0, 9, 3, 11, 12]
->>> arr1
+arr1
 [5, 4, 2, 6, 8, 7, 0, 9, 3, 11, 12]
->>> arr2
+arr2
 [0, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
->>> arr3
+arr3
 []
->>> selctionsort(arr2, lambda x,y : x<y)
+selctionsort(arr2, lambda x,y : x<y)
 Traceback (most recent call last):
   File "<pyshell#208>", line 1, in <module>
     selctionsort(arr2, lambda x,y : x<y)
 NameError: name 'selctionsort' is not defined. Did you mean: 'selectionsort'?
->>> selectionsort(arr2, lambda x,y : x<y)
->>> arr2
+selectionsort(arr2, lambda x,y : x<y)
+arr2
 [12, 11, 9, 8, 7, 6, 5, 4, 3, 2, 0]
->>> arr
+arr
 [5, 4, 2, 6, 8, 7, 0, 9, 3, 11, 12]
->>> arr3
+arr3
 []
->>> arr3 = arr.copy()
->>> arr4 = [insertionsort(arr3)]
+arr3 = arr.copy()
+arr4 = [insertionsort(arr3)]
 [5, 4, 2, 6, 8, 7, 0, 9, 3] [11, 12]
 [5, 4, 2, 6, 8, 7, 0, 9] [3, 11, 12]
 [5, 4, 2, 6, 8, 7, 0] [3, 9, 11, 12]
@@ -1013,7 +1013,288 @@ NameError: name 'selctionsort' is not defined. Did you mean: 'selectionsort'?
 [5, 4] [0, 2, 3, 6, 7, 8, 9, 11, 12]
 [5] [0, 2, 3, 4, 6, 7, 8, 9, 11, 12]
 [] [0, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
->>> arr3
+arr3
 []
->>> arr4
+arr4
 [[0, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]]
+def insertionsort_NM(a):
+    for i in range(1,len(a)):
+        k = a[i]
+        j = i=1
+        while j>= 0 and a[j] > key:
+            a[j + 1] = a[j]
+            j -= 1
+        a[j+1] = k
+        print(a)
+    return a
+
+arr3 = arr.copy()
+arr3
+[5, 4, 2, 6, 8, 7, 0, 9, 3, 11, 12]
+insertionsort_NM(a):
+    
+SyntaxError: invalid syntax
+insertionsort_NM(arr3)
+Traceback (most recent call last):
+  File "<pyshell#223>", line 1, in <module>
+    insertionsort_NM(arr3)
+  File "<pyshell#219>", line 5, in insertionsort_NM
+    while j>= 0 and a[j] > key:
+NameError: name 'key' is not defined
+def insertionsort_NM(a):
+    for i in range(1,len(a)):
+        k = a[i]
+        j = i=1
+        while j>= 0 and a[j] > k:
+            a[j + 1] = a[j]
+            j -= 1
+        a[j+1] = k
+        print(a)
+    return a
+
+arr3
+[5, 4, 2, 6, 8, 7, 0, 9, 3, 11, 12]
+insertionsort_NM(arr3)
+[5, 4, 4, 6, 8, 7, 0, 9, 3, 11, 12]
+[5, 4, 4, 6, 8, 7, 0, 9, 3, 11, 12]
+[5, 4, 6, 6, 8, 7, 0, 9, 3, 11, 12]
+[5, 4, 8, 6, 8, 7, 0, 9, 3, 11, 12]
+[5, 4, 7, 6, 8, 7, 0, 9, 3, 11, 12]
+[0, 5, 4, 6, 8, 7, 0, 9, 3, 11, 12]
+[0, 5, 9, 6, 8, 7, 0, 9, 3, 11, 12]
+[0, 3, 5, 6, 8, 7, 0, 9, 3, 11, 12]
+[0, 3, 11, 6, 8, 7, 0, 9, 3, 11, 12]
+[0, 3, 12, 6, 8, 7, 0, 9, 3, 11, 12]
+[0, 3, 12, 6, 8, 7, 0, 9, 3, 11, 12]
+arr3
+[0, 3, 12, 6, 8, 7, 0, 9, 3, 11, 12]
+arr
+[5, 4, 2, 6, 8, 7, 0, 9, 3, 11, 12]
+arr2
+[12, 11, 9, 8, 7, 6, 5, 4, 3, 2, 0]
+arr1
+[5, 4, 2, 6, 8, 7, 0, 9, 3, 11, 12]
+arr4
+[[0, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]]
+selectionsort(arr2)
+Traceback (most recent call last):
+  File "<pyshell#233>", line 1, in <module>
+    selectionsort(arr2)
+TypeError: selectionsort() missing 1 required positional argument: 'compare'
+seelctionsort(arr2, lambda x,y : x>y)
+Traceback (most recent call last):
+  File "<pyshell#234>", line 1, in <module>
+    seelctionsort(arr2, lambda x,y : x>y)
+NameError: name 'seelctionsort' is not defined. Did you mean: 'selectionsort'?
+selctionsort(arr2, lambda x,y : x>y)
+Traceback (most recent call last):
+  File "<pyshell#235>", line 1, in <module>
+    selctionsort(arr2, lambda x,y : x>y)
+NameError: name 'selctionsort' is not defined. Did you mean: 'selectionsort'?
+selectionsort(arr2, lambda x,y : x>y)
+arr
+[5, 4, 2, 6, 8, 7, 0, 9, 3, 11, 12]
+arr1
+[5, 4, 2, 6, 8, 7, 0, 9, 3, 11, 12]
+arr2
+[0, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
+arr3
+[0, 3, 12, 6, 8, 7, 0, 9, 3, 11, 12]
+arr4
+[[0, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]]
+arr = random.sample(range(0,13),11)
+bubble = arr.copy()
+select1 = arr.copy()
+select2 = arr.copy()
+insert1 = arr.copy()
+insert2 = arr.copy()
+arr
+[12, 7, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+bubble
+[12, 7, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+select1
+[12, 7, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+select2
+[12, 7, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+insert1
+[12, 7, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+insert2
+[12, 7, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+bubblesort(bubble)
+Traceback (most recent call last):
+  File "<pyshell#254>", line 1, in <module>
+    bubblesort(bubble)
+  File "<pyshell#66>", line 2, in bubblesort
+    for i in range(len(a)) : bubble(a,0,len(a)-i)
+TypeError: 'list' object is not callable
+Bub = bubble.copy()
+Bub
+[12, 7, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+bubblesort(Bub)
+Traceback (most recent call last):
+  File "<pyshell#257>", line 1, in <module>
+    bubblesort(Bub)
+  File "<pyshell#66>", line 2, in bubblesort
+    for i in range(len(a)) : bubble(a,0,len(a)-i)
+TypeError: 'list' object is not callable
+del bubble
+bubble()
+Traceback (most recent call last):
+  File "<pyshell#259>", line 1, in <module>
+    bubble()
+NameError: name 'bubble' is not defined
+bubble
+Traceback (most recent call last):
+  File "<pyshell#260>", line 1, in <module>
+    bubble
+NameError: name 'bubble' is not defined
+def bubble(a,left,right):
+    for i in range(left,right-1):
+        if a[i] > a[i+1] : a[i],a[i+1] = a[i+1],a[i]
+
+        
+arr
+
+[12, 7, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+bubble
+<function bubble at 0x00000271D48ECF60>
+select1
+[12, 7, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+Bub
+[12, 7, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+bubblesort(bub)
+Traceback (most recent call last):
+  File "<pyshell#267>", line 1, in <module>
+    bubblesort(bub)
+NameError: name 'bub' is not defined. Did you mean: 'Bub'?
+bubblesort(Bub)
+Bub
+[0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+selectionsort(select1,lambda x,y : x>y)
+selectionsort(select2,lambda x,y : x>y)
+insertionsort(insert1)
+[12, 7, 5, 2, 8, 11, 4, 9, 1] [0, 10]
+[12, 7, 5, 2, 8, 11, 4, 9] [0, 1, 10]
+[12, 7, 5, 2, 8, 11, 4] [0, 1, 9, 10]
+[12, 7, 5, 2, 8, 11] [0, 1, 4, 9, 10]
+[12, 7, 5, 2, 8] [0, 1, 4, 9, 10, 11]
+[12, 7, 5, 2] [0, 1, 4, 8, 9, 10, 11]
+[12, 7, 5] [0, 1, 2, 4, 8, 9, 10, 11]
+[12, 7] [0, 1, 2, 4, 5, 8, 9, 10, 11]
+[12] [0, 1, 2, 4, 5, 7, 8, 9, 10, 11]
+[] [0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+[0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+insertionsort_NM(insert2)
+[12, 7, 7, 2, 8, 11, 4, 9, 1, 10, 0]
+[12, 7, 7, 2, 8, 11, 4, 9, 1, 10, 0]
+[2, 12, 7, 2, 8, 11, 4, 9, 1, 10, 0]
+[2, 8, 12, 2, 8, 11, 4, 9, 1, 10, 0]
+[2, 8, 11, 2, 8, 11, 4, 9, 1, 10, 0]
+[2, 4, 8, 2, 8, 11, 4, 9, 1, 10, 0]
+[2, 4, 9, 2, 8, 11, 4, 9, 1, 10, 0]
+[1, 2, 4, 2, 8, 11, 4, 9, 1, 10, 0]
+[1, 2, 10, 2, 8, 11, 4, 9, 1, 10, 0]
+[0, 1, 2, 2, 8, 11, 4, 9, 1, 10, 0]
+[0, 1, 2, 2, 8, 11, 4, 9, 1, 10, 0]
+def insertionsort_NM(a): #mutating
+    for i in range(1,len(a)):
+        k = a[i]
+        j = i-1
+        while j>= 0 and a[j] > k:
+            a[j + 1] = a[j]
+            j -= 1
+        a[j+1] = k
+        print(a)
+    return a
+
+insertionsort_NM(insert2)
+[0, 1, 2, 2, 8, 11, 4, 9, 1, 10, 0]
+[0, 1, 2, 2, 8, 11, 4, 9, 1, 10, 0]
+[0, 1, 2, 2, 8, 11, 4, 9, 1, 10, 0]
+[0, 1, 2, 2, 8, 11, 4, 9, 1, 10, 0]
+[0, 1, 2, 2, 8, 11, 4, 9, 1, 10, 0]
+[0, 1, 2, 2, 4, 8, 11, 9, 1, 10, 0]
+[0, 1, 2, 2, 4, 8, 9, 11, 1, 10, 0]
+[0, 1, 1, 2, 2, 4, 8, 9, 11, 10, 0]
+[0, 1, 1, 2, 2, 4, 8, 9, 10, 11, 0]
+[0, 0, 1, 1, 2, 2, 4, 8, 9, 10, 11]
+[0, 0, 1, 1, 2, 2, 4, 8, 9, 10, 11]
+insert2 = arr.copy()
+insertionsort_NM(insert2)
+[7, 12, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+[5, 7, 12, 2, 8, 11, 4, 9, 1, 10, 0]
+[2, 5, 7, 12, 8, 11, 4, 9, 1, 10, 0]
+[2, 5, 7, 8, 12, 11, 4, 9, 1, 10, 0]
+[2, 5, 7, 8, 11, 12, 4, 9, 1, 10, 0]
+[2, 4, 5, 7, 8, 11, 12, 9, 1, 10, 0]
+[2, 4, 5, 7, 8, 9, 11, 12, 1, 10, 0]
+[1, 2, 4, 5, 7, 8, 9, 11, 12, 10, 0]
+[1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 0]
+[0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+[0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+arr
+[12, 7, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+Bub
+[0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+select1
+[0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+select2
+[0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+>>> insert1
+[]
+>>> insert2
+[0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+>>> selectionsort(select2, lambda x,y : x<y)
+>>> select2
+[12, 11, 10, 9, 8, 7, 5, 4, 2, 1, 0]
+>>> arr # before Sorting
+[12, 7, 5, 2, 8, 11, 4, 9, 1, 10, 0]
+>>> Bub #arr sorted using bubble sort
+[0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+>>> seelct1#sorted using selection sort
+Traceback (most recent call last):
+  File "<pyshell#289>", line 1, in <module>
+    seelct1#sorted using selection sort
+NameError: name 'seelct1' is not defined. Did you mean: 'select1'?
+>>> selct1#sorted using selection sort
+Traceback (most recent call last):
+  File "<pyshell#290>", line 1, in <module>
+    selct1#sorted using selection sort
+NameError: name 'selct1' is not defined. Did you mean: 'select1'?
+>>> select1#sorted using selection sort
+[0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+>>> select2 #sorted using selection sort in reverse
+[12, 11, 10, 9, 8, 7, 5, 4, 2, 1, 0]
+>>> insert1 #sorted using insertion sort  using new list (Non-Mutating)
+[]
+>>> insert2 # sorted using insertion sort (mutating)
+[0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+>>> def insertionsortsir(a):
+...     nop = len(a)        #nop- number of passes
+...     while nop > 0
+...     
+SyntaxError: expected ':'
+>>> def insertionsortsir(a):
+...     nop = len(a)        #nop- number of passes
+...     while nop > 0:
+...         print(a)
+...         curr = a.pop()
+...         i = 0
+...         while i <= (len(a) - nop) and a[i] < curr : i += 1
+...         a.insert(i,curr)
+...         nop -= 1
+... 
+...         
+>>> insert3 = arr.copy()
+>>> insertionsort(insert3)
+[12, 7, 5, 2, 8, 11, 4, 9, 1] [0, 10]
+[12, 7, 5, 2, 8, 11, 4, 9] [0, 1, 10]
+[12, 7, 5, 2, 8, 11, 4] [0, 1, 9, 10]
+[12, 7, 5, 2, 8, 11] [0, 1, 4, 9, 10]
+[12, 7, 5, 2, 8] [0, 1, 4, 9, 10, 11]
+[12, 7, 5, 2] [0, 1, 4, 8, 9, 10, 11]
+[12, 7, 5] [0, 1, 2, 4, 8, 9, 10, 11]
+[12, 7] [0, 1, 2, 4, 5, 8, 9, 10, 11]
+[12] [0, 1, 2, 4, 5, 7, 8, 9, 10, 11]
+[] [0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
+[0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12]
