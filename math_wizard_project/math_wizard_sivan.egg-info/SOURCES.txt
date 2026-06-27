@@ -1,0 +1,10 @@
+LICENSE.txt
+pyproject.toml
+math_wizard/__init__.py
+math_wizard/constants.py
+math_wizard/core_extensions.py
+math_wizard/custom_modules/geometry.py
+math_wizard_sivan.egg-info/PKG-INFO
+math_wizard_sivan.egg-info/SOURCES.txt
+math_wizard_sivan.egg-info/dependency_links.txt
+math_wizard_sivan.egg-info/top_level.txt
